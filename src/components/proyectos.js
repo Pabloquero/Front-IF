@@ -1,28 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Proyecto from "./proyecto"
+import ProyectosContainer from "./proyectos_container"
 
 export default function Proyectos() {
-  const data = useStaticQuery(graphql`
-    query {
-      ifapi {
-        proyectos {
-          id
-          status
-          acf {
-            imagen_proyecto
-            imagen_logo
-            nombre_proyecto
-            ubicacion
-            bajada
-            caracteristicas_1
-            caracteristicas_2
-            link
-          }
-        }
-      }
-    }
-  `)
   return (
     <div className="container">
       <h2 className="has-text-primary has-text-weight-light is-size-2 is-size-3-touch has-text-centered-touch is-uppercase is-family-monospace">
@@ -37,16 +16,7 @@ export default function Proyectos() {
       <div className="columns is-marginless" style={{ paddingTop: `50px` }}>
         <div className="column is-12 is-paddingless">
           <div className="columns is-marginless is-multiline is-centered">
-            {(() => {
-              return (
-                <React.Fragment>
-                  {data.ifapi.proyectos.map(proyecto => {
-                    if (proyecto.status === "publish")
-                      return <Proyecto key={proyecto.id} proyecto={proyecto} />
-                  })}
-                </React.Fragment>
-              )
-            })()}
+            <ProyectosContainer />
           </div>
         </div>
       </div>
