@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+// Customization
+
+//~~~ IMPORTS ~~~
+
+//Fuentes
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("./../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("./../fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("./../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("./../fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//~~~ VARIABLES ~~~
+
+//Fuentes
+$family-monospace: "Roboto Thin", sans-serif;
+$family-primary: "Roboto", sans-serif;
+$family-secondary: "Roboto Bold", sans-serif;
+$family-code: "Roboto Light", sans-serif;
+
+//Secciones
+$size-1: 6em;
+$size-2: 3.5em;
+//Titulos
+$size-3: 2.3em;
+$size-4: 1.6em;
+//Items
+$size-5: 1.2em;
+$size-6: 0.9em;
+$size-7: 0.65em;
+
+//Colores
+$primary: #470a68;
+$grey: #d8d9dd;
+$grey-darker: #333333;
+$warning: rgba(26, 26, 26, 0.6);
+$success: rgba(71, 10, 104, 0.87);
+
+//Navbar
+$navbar-background-color: rgba(0, 0, 0, 0);
+$navbar-item-hover-background-color: $primary;
+$navbar-height: 5rem;
+
+//Footer
+$footer-padding: 1.1em 1em 2.2em;
+
+//Inputs
+$input-shadow: 0px;
+$input-focus-border-color: $primary;
