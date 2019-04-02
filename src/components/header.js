@@ -69,12 +69,7 @@ const Header = () => {
 }
 
 function MenuLink({ link, index }) {
-  let linkInterno
-  if (link.url !== "") {
-    linkInterno = `/${link.url}/`
-  } else {
-    linkInterno = "/"
-  }
+  let linkInterno = link.url !== "" ? `/${link.url}/` : `/`
 
   return (
     <Link
@@ -83,6 +78,7 @@ function MenuLink({ link, index }) {
       state={{
         state: link.form,
       }}
+      activeStyle={{ borderBottom: `3px solid white` }}
       style={{
         textDecoration: `none`,
       }}
