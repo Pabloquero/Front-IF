@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 export default function compraContenido({
-  info: { titulo, descripcion, imagen_destacada }
+  info: { titulo, descripcion, imagen_destacada },
 }) {
   return (
     <div>
@@ -106,9 +106,9 @@ export default function compraContenido({
             <div className="field" style={{ padding: `30px 0px 40px` }}>
               <div className="column is-paddingless is-12">
                 <div className="control">
-                  <a className="has-text-white is-fullwidth is-radiusless is-size-5 is-size-6-touch button is-black is-uppercase is-large">
+                  <button className="has-text-white is-fullwidth is-radiusless is-size-5 is-size-6-touch button is-black is-uppercase is-large">
                     enviar
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -116,5 +116,5 @@ export default function compraContenido({
         </div>
       </div>
     </div>
-  );
+  )
 }

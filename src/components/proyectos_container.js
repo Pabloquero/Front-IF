@@ -25,7 +25,8 @@ export default function proyectosContainer() {
   `)
   return (
     <React.Fragment>
-      {data.ifapi.proyectos.map(proyecto => {
+      {// eslint-disable-next-line
+      data.ifapi.proyectos.map(proyecto => {
         if (proyecto.status === "publish")
           return <Proyecto key={proyecto.id} proyecto={proyecto} />
       })}
