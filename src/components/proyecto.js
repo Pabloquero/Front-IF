@@ -56,14 +56,14 @@ export default function Proyecto({
         <div className="column is-paddingless is-7">
           <div style={{ paddingLeft: `15px`, lineHeight: `1.5em` }}>
             <h1
-              className="has-text-dark is-family-code is-uppercase"
+              className="has-text-dark is-family-code"
               style={{ fontSize: `1.5em` }}
             >
               {nombre_proyecto}
             </h1>
             <h1
               className="has-text-primary is-family-code is-uppercase"
-              style={{ fontSize: `1.5em` }}
+              style={{ fontSize: `1.4em` }}
             >
               {ubicacion}
             </h1>
@@ -83,14 +83,14 @@ export default function Proyecto({
         <div className="column is-paddingless is-12">
           <div style={{ lineHeight: `1.5em` }}>
             <h1
-              className="has-text-dark is-family-code is-uppercase has-text-centered"
+              className="has-text-dark is-family-code has-text-centered"
               style={{ fontSize: `1.5em` }}
             >
               {nombre_proyecto}
             </h1>
             <h1
               className="has-text-primary is-family-code is-uppercase has-text-centered"
-              style={{ fontSize: `1.5em` }}
+              style={{ fontSize: `1.4em` }}
             >
               {ubicacion}
             </h1>
@@ -130,14 +130,14 @@ export default function Proyecto({
               <div className="columns is-marginless is-mobile">
                 <div className="column is-12 has-text-centered">
                   <p
-                    className="has-text-dark has-text-weight-normal"
+                    className="has-text-dark has-text-weight-normal is-uppercase"
                     style={{ fontSize: `0.65em` }}
                   >
                     {caracteristicas_1}
                   </p>
                   <p
                     className="has-text-dark has-text-weight-normal is-uppercase"
-                    style={{ fontSize: `0.55em` }}
+                    style={{ fontSize: `0.65em` }}
                   >
                     {caracteristicas_2}
                   </p>
