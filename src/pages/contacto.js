@@ -34,7 +34,7 @@ export default function Contacto(props) {
   }
 
   let estadoForm =
-    typeof window === "undefined" ? props.location.state.state : "contacto"
+    typeof window === "undefined" ? "contacto" : props.location.state.state
 
   const [formulario, setFormulario] = useState(estadoForm)
 
