@@ -39,7 +39,7 @@
 }
 
 .innerInfo {
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
 }
 
 #compraPropiedadesBanner {
@@ -130,5 +130,16 @@
   height: 700px;
   @media screen and (max-width: $desktop - 1) {
     height: 260px;
+  }
+}
+
+.logo-menu {
+  background-color: $success;
+}
+
+.linkActivo {
+  background-color: $primary;
+  @media screen and (min-width: $desktop) {
+    border-bottom: 1px solid white;
   }
 }

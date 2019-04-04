@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 //import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
+import classNames from "classnames"
 
 const Header = () => {
   const menuLinks = [
@@ -23,6 +24,8 @@ const Header = () => {
     },
   ]
 
+  const [toggleMenu, setToggleMenu] = useState(false)
+
   return (
     <header>
       <div className="has-background-success" id="menu">
@@ -41,9 +44,13 @@ const Header = () => {
               </Link>
 
               <button
-                className="navbar-burger is-transparent button"
+                className={classNames({
+                  "navbar-burger is-transparent button": !toggleMenu,
+                  "navbar-burger is-transparent button is-active": toggleMenu,
+                })}
                 aria-label="menu"
                 aria-expanded="false"
+                onClick={() => setToggleMenu(!toggleMenu)}
               >
                 <span aria-hidden="true" className="has-text-white" />
                 <span aria-hidden="true" className="has-text-white" />
@@ -51,10 +58,17 @@ const Header = () => {
               </button>
             </div>
 
-            <div className="navbar-end is-hidden-touch">
-              {menuLinks.map((link, index) => (
-                <MenuLink key={index} link={link} />
-              ))}
+            <div
+              className={classNames({
+                "navbar-menu has-background-success": !toggleMenu,
+                "navbar-menu has-background-success is-active": toggleMenu,
+              })}
+            >
+              <div className="navbar-end">
+                {menuLinks.map((link, index) => (
+                  <MenuLink key={index} link={link} />
+                ))}
+              </div>
             </div>
           </nav>
         </div>
@@ -73,13 +87,13 @@ function MenuLink({ link, index }) {
       state={{
         state: link.form,
       }}
-      activeStyle={{ borderBottom: `3px solid white` }}
+      activeClassName="linkActivo"
       style={{
         textDecoration: `none`,
       }}
       key={index}
     >
-      {link.texto}
+      <p className="has-text-centered-mobile">{link.texto}</p>
     </Link>
   )
 }

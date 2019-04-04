@@ -53,17 +53,17 @@ export default function Proyecto({
             style={{ border: `1px solid #666666` }}
           />
         </div>
-        <div className="column is-paddingless is-7">
+        <div className="column is-paddingless is-8">
           <div style={{ paddingLeft: `15px`, lineHeight: `1.5em` }}>
             <h1
               className="has-text-dark is-family-code"
-              style={{ fontSize: `1.5em` }}
+              style={{ fontSize: `1.4em` }}
             >
               {nombre_proyecto}
             </h1>
             <h1
-              className="has-text-primary is-family-code is-uppercase"
-              style={{ fontSize: `1.4em` }}
+              className="has-text-primary is-family-code is-uppercase has-text-weight-bold"
+              style={{ fontSize: `1.3em` }}
             >
               {ubicacion}
             </h1>
@@ -84,13 +84,13 @@ export default function Proyecto({
           <div style={{ lineHeight: `1.5em` }}>
             <h1
               className="has-text-dark is-family-code has-text-centered"
-              style={{ fontSize: `1.5em` }}
+              style={{ fontSize: `1.4em` }}
             >
               {nombre_proyecto}
             </h1>
             <h1
-              className="has-text-primary is-family-code is-uppercase has-text-centered"
-              style={{ fontSize: `1.4em` }}
+              className="has-text-primary is-family-code is-uppercase has-text-centered has-text-weight-bold"
+              style={{ fontSize: `1.3em` }}
             >
               {ubicacion}
             </h1>
@@ -107,7 +107,7 @@ export default function Proyecto({
   }
 
   return (
-    <div className="column is-4-desktop is-6-tablet is-paddingless">
+    <div className="column is-4-widescreen is-6-tablet is-paddingless">
       <div className="innerProyecto">
         <div
           className="columns is-marginless is-multiline is-mobile has-background-white"
@@ -116,7 +116,7 @@ export default function Proyecto({
           <div
             className="column is-paddingless is-12 is-mobile"
             style={{
-              height: `250px`,
+              height: `210px`,
               backgroundImage: `url(${imagen_proyecto})`,
               backgroundPosition: `center center`,
               backgroundRepeat: `no-repeat`,
