@@ -33,7 +33,11 @@ export default function Contacto(props) {
     tituloBold: "nosotros",
   }
 
-  const [formulario, setFormulario] = useState(props.location.state.state)
+  let estadoForm = props.location.state.state
+    ? props.location.state.state
+    : "contacto"
+
+  const [formulario, setFormulario] = useState(estadoForm)
 
   let texto_formulario
 
@@ -48,7 +52,7 @@ export default function Contacto(props) {
       texto_formulario = data.ifapi.pagContacto.acf.texto_inversionistas
       break
     default:
-      texto_formulario = "contacto"
+      texto_formulario = "ERROR"
   }
 
   return (
