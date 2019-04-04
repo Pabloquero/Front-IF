@@ -22,6 +22,21 @@ const Header = () => {
       url: "contacto",
       form: "contacto",
     },
+    {
+      texto: "INVERSIONISTAS",
+      url: "inversionistas",
+      footer: true,
+    },
+    {
+      texto: "OPORTUNIDADES",
+      url: "oportunidades",
+      footer: true,
+    },
+    {
+      texto: "TRAYECTORIA",
+      url: "trayectoria",
+      footer: true,
+    },
   ]
 
   const [toggleMenu, setToggleMenu] = useState(false)
@@ -82,7 +97,10 @@ function MenuLink({ link, index }) {
 
   return (
     <Link
-      className="has-text-white navbar-item is-size-6"
+      className={classNames({
+        "has-text-white navbar-item is-size-6": !link.footer,
+        "has-text-white navbar-item is-size-6 is-hidden-desktop": link.footer,
+      })}
       to={linkInterno}
       state={{
         state: link.form,
@@ -93,7 +111,9 @@ function MenuLink({ link, index }) {
       }}
       key={index}
     >
-      <p className="has-text-centered-mobile">{link.texto}</p>
+      <p className="has-text-centered-touch" style={{ margin: `auto` }}>
+        {link.texto}
+      </p>
     </Link>
   )
 }

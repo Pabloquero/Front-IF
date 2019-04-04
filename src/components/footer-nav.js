@@ -37,7 +37,10 @@ export default function FooterLinks() {
     },
   ]
   return (
-    <div className="columns is-marginless" style={{ paddingBottom: 5 }}>
+    <div
+      className="columns is-marginless is-hidden-touch"
+      style={{ paddingBottom: 5 }}
+    >
       {footerLinks.map((link, index) => (
         <FooterLink key={index} link={link} />
       ))}

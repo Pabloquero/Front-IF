@@ -21,15 +21,13 @@
       max-height: 52px;
       height: auto;
       max-width: 100%;
-      @media screen and (max-width: $desktop - 1) {
-        max-height: 35px;
-      }
     }
     button {
       background-color: rgba(0, 0, 0, 0);
       border: 0px;
       height: 40px;
       width: 40px;
+      margin-top: 11px;
     }
   }
 }
@@ -140,6 +138,8 @@
 .linkActivo {
   background-color: $primary;
   @media screen and (min-width: $desktop) {
-    border-bottom: 1px solid white;
+    p {
+      border-bottom: 1px solid white;
+    }
   }
 }

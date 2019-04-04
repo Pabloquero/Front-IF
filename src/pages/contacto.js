@@ -9,6 +9,9 @@ import FooterSpace from "../components/footer-top-space"
 import ImagenFondo from "../components/fondo-pagina"
 import FormContacto from "../components/form-contacto"
 
+import { MdLocalPhone } from "react-icons/md"
+import { IoIosMail } from "react-icons/io"
+
 export default function Contacto(props) {
   const data = useStaticQuery(graphql`
     query {
@@ -69,7 +72,7 @@ export default function Contacto(props) {
         <div className="columns is-marginless" style={{ padding: `10px 23px` }}>
           <div className="column is-10 is-offset-1 is-paddingless">
             <div className="columns is-marginless">
-              <div className="column is-10 is-offset-1 is-paddingless">
+              <div className="column is-12 is-paddingless">
                 <p
                   style={{ padding: `5vh 8vw` }}
                   className="has-text-centered is-size-5 is-size-6-touch has-text-dark is-family-code"
@@ -131,10 +134,24 @@ export default function Contacto(props) {
             </div>
             <div
               className="columns is-marginless"
-              style={{ paddingTop: `40px` }}
+              style={{ paddingTop: `40px`, lineHeight: `50px` }}
             >
               <div className="has-text-centered is-family-code has-text-dark column is-paddingless">
-                <p>+562 3323 1020</p>
+                <p
+                  style={{
+                    display: `flex`,
+                    alignItems: `center`,
+                    justifyContent: `center`,
+                  }}
+                >
+                  <MdLocalPhone
+                    className="is-size-2"
+                    style={{
+                      paddingRight: `8px`,
+                    }}
+                  />{" "}
+                  <span className="is-size-5">+562 3323 1020</span>
+                </p>
               </div>
               <div
                 className="has-text-centered is-family-code has-text-dark column is-paddingless is-5"
@@ -143,7 +160,23 @@ export default function Contacto(props) {
                   borderRight: `1px solid black`,
                 }}
               >
-                <p>info@inmobiliariafuenzalida.com</p>
+                <p
+                  style={{
+                    display: `flex`,
+                    alignItems: `center`,
+                    justifyContent: `center`,
+                  }}
+                >
+                  <IoIosMail
+                    className="is-size-2"
+                    style={{
+                      paddingRight: `8px`,
+                    }}
+                  />{" "}
+                  <span className="is-size-5">
+                    info@inmobiliariafuenzalida.com
+                  </span>
+                </p>
               </div>
               <div className="has-text-centered is-family-code has-text-dark column is-paddingless">
                 <p>redes</p>

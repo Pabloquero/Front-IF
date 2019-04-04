@@ -9,8 +9,8 @@ export default function CompraPropiedades() {
     >
       <div className="hero-body">
         <div className="container">
-          <div className="columns is-marginless">
-            <div className="column is-10 is-offset-1  has-text-centered">
+          <div className="columns is-centered is-marginless">
+            <div className="column is-11 has-text-centered">
               <h1
                 className="is-uppercase compraTerrenosTitle has-text-white is-size-3 is-size-5-touch"
                 style={{ paddingBottom: `50px`, letterSpacing: `2px` }}
