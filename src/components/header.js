@@ -32,14 +32,9 @@ const Header = () => {
             role="navigation"
             aria-label="main navigation"
           >
-            <div className="navbar-brand" style={{ padding: `15px 15px` }}>
+            <div className="navbar-brand logo-menu">
               <Link to="/">
                 <img
-                  style={{
-                    maxHeight: `60px`,
-                    height: `auto`,
-                    maxWidth: `100%`,
-                  }}
                   src="http://www.betafuenzalida.bylcomunicaciones.com/wp-content/uploads/2019/03/logo.png"
                   alt="Inmobiliaria Fuenzalida"
                 />

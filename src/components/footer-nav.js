@@ -8,6 +8,7 @@ function FooterLink({ link, index }) {
         <Link
           className="has-text-white is-size-6"
           to={`/${link.url}/`}
+          activeStyle={{ borderBottom: `1px solid white` }}
           style={{
             textDecoration: `none`,
           }}

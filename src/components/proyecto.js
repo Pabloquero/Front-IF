@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Proyecto({
   proyecto: {
@@ -10,11 +10,11 @@ export default function Proyecto({
       bajada,
       caracteristicas_1,
       caracteristicas_2,
-      link
-    }
-  }
+      link,
+    },
+  },
 }) {
-  let botonLink;
+  let botonLink
   if (!Object.values({ link }).includes("")) {
     botonLink = (
       <a
@@ -30,7 +30,7 @@ export default function Proyecto({
           ver mas
         </span>
       </a>
-    );
+    )
   } else {
     botonLink = (
       <span
@@ -39,10 +39,10 @@ export default function Proyecto({
       >
         proximamente
       </span>
-    );
+    )
   }
 
-  let logoImg;
+  let logoImg
   if (!Object.values({ imagen_logo }).includes("false")) {
     logoImg = (
       <div className="columns is-marginless is-mobile is-vcentered">
@@ -76,7 +76,7 @@ export default function Proyecto({
           </div>
         </div>
       </div>
-    );
+    )
   } else {
     logoImg = (
       <div className="columns is-marginless is-mobile is-vcentered">
@@ -103,7 +103,7 @@ export default function Proyecto({
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -121,7 +121,7 @@ export default function Proyecto({
               backgroundPosition: `center center`,
               backgroundRepeat: `no-repeat`,
               backgroundSize: `cover`,
-              position: `relative`
+              position: `relative`,
             }}
           />
           <div className="column is-paddingless is-12 is-mobile">
@@ -130,14 +130,14 @@ export default function Proyecto({
               <div className="columns is-marginless is-mobile">
                 <div className="column is-12 has-text-centered">
                   <p
-                    className="has-text-dark has-text-weight-normal is-uppercase"
+                    className="has-text-dark has-text-weight-normal"
                     style={{ fontSize: `0.65em` }}
                   >
                     {caracteristicas_1}
                   </p>
                   <p
                     className="has-text-dark has-text-weight-normal is-uppercase"
-                    style={{ fontSize: `0.65em` }}
+                    style={{ fontSize: `0.55em` }}
                   >
                     {caracteristicas_2}
                   </p>
@@ -153,5 +153,5 @@ export default function Proyecto({
         </div>
       </div>
     </div>
-  );
+  )
 }
