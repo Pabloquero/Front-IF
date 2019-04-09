@@ -97,9 +97,8 @@ function MenuLink({ link, index }) {
 
   return (
     <Link
-      className={classNames({
-        "has-text-white navbar-item is-size-6": !link.footer,
-        "has-text-white navbar-item is-size-6 is-hidden-desktop": link.footer,
+      className={classNames("has-text-white navbar-item is-size-6", {
+        "is-hidden-desktop": link.footer,
       })}
       to={linkInterno}
       state={{

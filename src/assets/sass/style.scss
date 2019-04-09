@@ -113,7 +113,10 @@
 .tituloPage {
   padding-top: 140px;
   @media screen and (max-width: $desktop - 1) {
-    padding-top: 100px;
+    padding-top: 115px;
+  }
+  @media screen and (max-width: $tablet - 1) {
+    padding-top: 120px;
   }
   h1 {
     line-height: 0.7em;
@@ -127,7 +130,7 @@
 .imagenFondoPaginas {
   height: 700px;
   @media screen and (max-width: $desktop - 1) {
-    height: 260px;
+    height: 280px;
   }
 }
 
@@ -142,4 +145,24 @@
       border-bottom: 1px solid white;
     }
   }
+}
+
+.formCompra {
+  padding-bottom: 80px;
+  @media screen and (max-width: $tablet - 1) {
+    padding-bottom: 0px;
+  }
+}
+
+.contentCompra {
+  padding: 10px 23px;
+  @media screen and (max-width: $tablet - 1) {
+    padding: 0px;
+  }
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }

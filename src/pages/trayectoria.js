@@ -103,7 +103,7 @@ export default function TrayectoriaPage() {
                 <div className="column is-12">
                   <p
                     className="is-size-5 is-size-6-mobile has-text-centered has-text-justified is-family-code"
-                    style={{ paddingBottom: `40px` }}
+                    style={{ paddingBottom: `40px`, textAlignLast: `center` }}
                   >
                     {data.ifapi.pagTrayectoria.acf.texto_trayectoria}
                   </p>

@@ -36,9 +36,9 @@ export default function Compra() {
       <ImagenFondo imgf={data.ifapi.pagCompra.acf.imagen_de_fondo} />
       <TituloPage titulo={titulo} />
       <div className="container has-background-grey">
-        <div className="columns is-marginless" style={{ padding: `10px 23px` }}>
+        <div className="columns is-marginless">
           <div className="column is-10 is-offset-1 is-paddingless">
-            <div className="columns is-marginless is-multiline is-centered">
+            <div className="columns is-marginless is-multiline is-centered formCompra">
               <CompraContenido info={data.ifapi.pagCompra.acf} />
             </div>
           </div>
