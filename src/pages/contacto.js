@@ -11,6 +11,10 @@ import FormContacto from "../components/form-contacto"
 
 import { MdLocalPhone } from "react-icons/md"
 import { IoIosMail } from "react-icons/io"
+import { FaFacebook } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
+import { FaYoutube } from "react-icons/fa"
 
 export default function Contacto(props) {
   const data = useStaticQuery(graphql`
@@ -74,7 +78,7 @@ export default function Contacto(props) {
             <div className="columns is-marginless">
               <div className="column is-12 is-paddingless">
                 <p
-                  style={{ padding: `5vh 8vw` }}
+                  style={{ padding: `5vh 0` }}
                   className="has-text-centered is-size-5 is-size-6-touch has-text-dark is-family-code"
                 >
                   {texto_formulario}
@@ -86,11 +90,13 @@ export default function Contacto(props) {
                 <button
                   onClick={() => setFormulario("contacto")}
                   style={{ border: `2px #d8d9dd solid` }}
-                  className={classNames({
-                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code": formulario,
-                    "is-white has-text-grey-dark": formulario !== "contacto",
-                    "is-primary has-text-white": formulario === "contacto",
-                  })}
+                  className={classNames(
+                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code",
+                    {
+                      "is-white has-text-grey-dark": formulario !== "contacto",
+                      "is-primary has-text-white": formulario === "contacto",
+                    }
+                  )}
                 >
                   contacto
                 </button>
@@ -99,26 +105,30 @@ export default function Contacto(props) {
                 <button
                   onClick={() => setFormulario("servicio")}
                   style={{ border: `2px #d8d9dd solid` }}
-                  className={classNames({
-                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code": formulario,
-                    "is-white has-text-grey-dark": formulario !== "servicio",
-                    "is-primary has-text-white": formulario === "servicio",
-                  })}
+                  className={classNames(
+                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code",
+                    {
+                      "is-white has-text-grey-dark": formulario !== "servicio",
+                      "is-primary has-text-white": formulario === "servicio",
+                    }
+                  )}
                 >
-                  servicio al cliente
+                  post venta
                 </button>
               </div>
               <div className="column is-paddingless">
                 <button
                   onClick={() => setFormulario("inversionistas")}
                   style={{ border: `2px #d8d9dd solid` }}
-                  className={classNames({
-                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code": formulario,
-                    "is-white has-text-grey-dark":
-                      formulario !== "inversionistas",
-                    "is-primary has-text-white":
-                      formulario === "inversionistas",
-                  })}
+                  className={classNames(
+                    "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code",
+                    {
+                      "is-white has-text-grey-dark":
+                        formulario !== "inversionistas",
+                      "is-primary has-text-white":
+                        formulario === "inversionistas",
+                    }
+                  )}
                 >
                   Inversionistas
                 </button>
@@ -136,7 +146,7 @@ export default function Contacto(props) {
               className="columns is-marginless"
               style={{ paddingTop: `40px`, lineHeight: `50px` }}
             >
-              <div className="has-text-centered is-family-code has-text-dark column is-paddingless">
+              <div className="has-text-centered is-family-code has-text-dark column">
                 <p
                   style={{
                     display: `flex`,
@@ -145,16 +155,18 @@ export default function Contacto(props) {
                   }}
                 >
                   <MdLocalPhone
-                    className="is-size-2"
                     style={{
                       paddingRight: `8px`,
+                      fontSize: `2.7em`,
                     }}
                   />{" "}
-                  <span className="is-size-5">+562 3323 1020</span>
+                  <span className="is-size-5-widescreen is-size-6-tablet">
+                    +562 3323 1020
+                  </span>
                 </p>
               </div>
               <div
-                className="has-text-centered is-family-code has-text-dark column is-paddingless is-5"
+                className="has-text-centered is-family-code has-text-dark column is-5"
                 style={{
                   borderLeft: `1px solid black`,
                   borderRight: `1px solid black`,
@@ -168,18 +180,43 @@ export default function Contacto(props) {
                   }}
                 >
                   <IoIosMail
-                    className="is-size-2"
                     style={{
                       paddingRight: `8px`,
+                      fontSize: `3em`,
                     }}
                   />{" "}
-                  <span className="is-size-5">
+                  <span className="is-size-5-widescreen is-size-6-tablet">
                     info@inmobiliariafuenzalida.com
                   </span>
                 </p>
               </div>
-              <div className="has-text-centered is-family-code has-text-dark column is-paddingless">
-                <p>redes</p>
+              <div className="has-text-dark column">
+                <div className="level is-mobile">
+                  <FaFacebook
+                    className="level-item"
+                    style={{
+                      fontSize: `2.5em`,
+                    }}
+                  />{" "}
+                  <FaInstagram
+                    className="level-item"
+                    style={{
+                      fontSize: `2.6em`,
+                    }}
+                  />{" "}
+                  <FaLinkedin
+                    className="level-item"
+                    style={{
+                      fontSize: `2.5em`,
+                    }}
+                  />{" "}
+                  <FaYoutube
+                    className="level-item"
+                    style={{
+                      fontSize: `2.9em`,
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>

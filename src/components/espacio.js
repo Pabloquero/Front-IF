@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 export default function Espacio({
-  espacio: { titulo, imagen, descripcion, alineacion }
+  espacio: { titulo, imagen, descripcion, alineacion },
 }) {
   if (alineacion === "izq")
     return (
@@ -23,7 +23,11 @@ export default function Espacio({
                 </h1>
                 <p
                   className="is-size-5 is-size-6-touch has-text-dark is-family-code"
-                  style={{ paddingTop: `10px` }}
+                  style={{
+                    paddingTop: `10px`,
+                    textAlign: `justify`,
+                    textAlignLast: `left`,
+                  }}
                 >
                   {descripcion}
                 </p>
@@ -32,7 +36,7 @@ export default function Espacio({
           </div>
         </div>
       </div>
-    );
+    )
   else if (alineacion === "der") {
     return (
       <div className="column is-12 is-paddingless">
@@ -42,7 +46,7 @@ export default function Espacio({
               <div
                 style={{
                   paddingRight: `20px`,
-                  borderRight: `4px #470a68 solid`
+                  borderRight: `4px #470a68 solid`,
                 }}
               >
                 <h1
@@ -52,8 +56,12 @@ export default function Espacio({
                   {titulo}
                 </h1>
                 <p
-                  className="is-size-5 is-size-6-touch has-text-dark is-family-code has-text-right"
-                  style={{ paddingTop: `10px` }}
+                  className="is-size-5 is-size-6-touch has-text-dark is-family-code"
+                  style={{
+                    paddingTop: `10px`,
+                    textAlign: `justify`,
+                    textAlignLast: `right`,
+                  }}
                 >
                   {descripcion}
                 </p>
@@ -68,7 +76,7 @@ export default function Espacio({
               <div
                 style={{
                   paddingRight: `20px`,
-                  borderRight: `4px #470a68 solid`
+                  borderRight: `4px #470a68 solid`,
                 }}
               >
                 <h1
@@ -88,6 +96,6 @@ export default function Espacio({
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

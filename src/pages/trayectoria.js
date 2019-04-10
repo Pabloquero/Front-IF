@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import mapboxgl from "mapbox-gl"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +10,46 @@ import ImagenFondo from "../components/fondo-pagina"
 import ItemGal from "../components/item-galeria"
 
 export default function TrayectoriaPage() {
+  useEffect(() => {
+    mapboxgl.accessToken =
+      "pk.eyJ1Ijoic2FtZXN0ZWJhbiIsImEiOiJjamQzMGc3dDcyNTRkMzNtd2xqeG5yamQxIn0.ETSluXXZBWgPZtHU0S_AGw"
+    var map = new mapboxgl.Map({
+      container: "map", // container id
+      style: "mapbox://styles/samesteban/cji1si39w01pm2slr4fd0fiet", // stylesheet location
+      center: [-70.604226, -33.407916], // starting position [lng, lat]
+      zoom: 12, // starting zoom
+    })
+
+    map.doubleClickZoom.disable()
+    // 			map.scrollZoom.disable();
+
+    map.on("click", "fuenzalida-trayectoria", function(e) {
+      var coordinates = e.features[0].geometry.coordinates.slice()
+      var description = e.features[0].properties.title
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML("<h5>" + description + "</h5>")
+        .addTo(map)
+    })
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on("mouseenter", "fuenzalida-trayectoria", function() {
+      map.getCanvas().style.cursor = "pointer"
+    })
+
+    // Change it back to a pointer when it leaves.
+    map.on("mouseleave", "fuenzalida-trayectoria", function() {
+      map.getCanvas().style.cursor = ""
+    })
+  })
+
   const data = useStaticQuery(graphql`
     query {
       ifapi {
@@ -127,13 +168,7 @@ export default function TrayectoriaPage() {
         </div>
       </div>
       <FooterSpace />
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.648133762172!2d-70.57641678480186!3d-33.406342980786604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf27538cab01%3A0x726db94261be52c7!2sAlonso+de+C%C3%B3rdova+5320%2C+Las+Condes%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1551890153887"
-        frameBorder="0"
-        title="mapbox"
-        style={{ border: 0, width: `100%`, height: `400px` }}
-        allowFullScreen
-      />
+      <div id="map" style={{ border: 0, width: `100%`, height: `400px` }} />
     </Layout>
   )
 }

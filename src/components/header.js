@@ -59,9 +59,8 @@ const Header = () => {
               </Link>
 
               <button
-                className={classNames({
-                  "navbar-burger is-transparent button": !toggleMenu,
-                  "navbar-burger is-transparent button is-active": toggleMenu,
+                className={classNames("navbar-burger is-transparent button", {
+                  "is-active": toggleMenu,
                 })}
                 aria-label="menu"
                 aria-expanded="false"
@@ -74,9 +73,8 @@ const Header = () => {
             </div>
 
             <div
-              className={classNames({
-                "navbar-menu has-background-success": !toggleMenu,
-                "navbar-menu has-background-success is-active": toggleMenu,
+              className={classNames("navbar-menu has-background-success", {
+                "is-active": toggleMenu,
               })}
             >
               <div className="navbar-end">
