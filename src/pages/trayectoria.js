@@ -168,6 +168,16 @@ export default function TrayectoriaPage() {
         </div>
       </div>
       <FooterSpace />
+      <div
+        className="columns is-marginless is-multiline"
+        style={{ padding: `15px 0px 15px` }}
+      >
+        <div className="column is-paddingless is-12 has-text-centered has-text-primary">
+          <h1 className="is-uppercase is-size-3 is-size-4-mobile is-family-monospace">
+            proyectos <span className="is-family-primary">realizados</span>
+          </h1>
+        </div>
+      </div>
       <div id="map" style={{ border: 0, width: `100%`, height: `400px` }} />
     </Layout>
   )

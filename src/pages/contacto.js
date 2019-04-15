@@ -143,7 +143,7 @@ export default function Contacto(props) {
               </div>
             </div>
             <div
-              className="columns is-marginless"
+              className="columns is- is-hidden-touch"
               style={{ paddingTop: `40px`, lineHeight: `50px` }}
             >
               <div className="has-text-centered is-family-code has-text-dark column">
@@ -191,6 +191,77 @@ export default function Contacto(props) {
                 </p>
               </div>
               <div className="has-text-dark column">
+                <div className="level is-mobile">
+                  <FaFacebook
+                    className="level-item"
+                    style={{
+                      fontSize: `2.5em`,
+                    }}
+                  />{" "}
+                  <FaInstagram
+                    className="level-item"
+                    style={{
+                      fontSize: `2.6em`,
+                    }}
+                  />{" "}
+                  <FaLinkedin
+                    className="level-item"
+                    style={{
+                      fontSize: `2.5em`,
+                    }}
+                  />{" "}
+                  <FaYoutube
+                    className="level-item"
+                    style={{
+                      fontSize: `2.9em`,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="columns is- is-hidden-desktop is-multiline is-mobile"
+              style={{ paddingTop: `15px` }}
+            >
+              <div className="has-text-centered is-family-code has-text-dark column is-12">
+                <p
+                  style={{
+                    display: `flex`,
+                    alignItems: `center`,
+                    justifyContent: `center`,
+                  }}
+                >
+                  <MdLocalPhone
+                    style={{
+                      paddingRight: `8px`,
+                      fontSize: `2.7em`,
+                    }}
+                  />{" "}
+                  <span className="is-size-5-widescreen is-size-6-tablet">
+                    +562 3323 1020
+                  </span>
+                </p>
+              </div>
+              <div className="has-text-centered is-family-code has-text-dark column is-12">
+                <p
+                  style={{
+                    display: `flex`,
+                    alignItems: `center`,
+                    justifyContent: `center`,
+                  }}
+                >
+                  <IoIosMail
+                    style={{
+                      paddingRight: `8px`,
+                      fontSize: `3em`,
+                    }}
+                  />{" "}
+                  <span className="is-size-5-widescreen is-size-6-tablet">
+                    info@inmobiliariafuenzalida.com
+                  </span>
+                </p>
+              </div>
+              <div className="has-text-dark column is-offset-2 is-8">
                 <div className="level is-mobile">
                   <FaFacebook
                     className="level-item"
