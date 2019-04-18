@@ -34,7 +34,10 @@ export default function Proyecto({
   } else {
     botonLink = (
       <span
-        style={{ padding: `8px 25px 10px`, fontSize: `1.3em` }}
+        style={{
+          padding: `18px 25px 20px`,
+          fontSize: `1.3em`,
+        }}
         className="is-family-code has-text-primary is-uppercase"
       >
         proximamente
@@ -124,7 +127,10 @@ export default function Proyecto({
               position: `relative`,
             }}
           />
-          <div className="column is-paddingless is-12 is-mobile">
+          <div
+            className="column is-paddingless is-12 is-mobile"
+            style={{ minHeight: `210px` }}
+          >
             <div className="innerInfo">
               {logoImg}
               <div className="columns is-marginless is-mobile">
