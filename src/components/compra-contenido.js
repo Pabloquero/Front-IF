@@ -1,9 +1,6 @@
 import React from "react"
 import FormularioCompraPropiedades from "./form-compraprop"
 
-const handleSubmit = values => alert(JSON.stringify(values))
-const initialValues = { nombre: "" }
-
 export default function compraContenido({
   info: { titulo, descripcion, imagen_destacada },
 }) {
@@ -42,10 +39,7 @@ export default function compraContenido({
           </div>
           <div className="columns is-marginless">
             <div className="column is-paddingless is-12 is-10-mobile is-offset-1-mobile">
-              <FormularioCompraPropiedades
-                handleSubmit={handleSubmit}
-                initialValues={initialValues}
-              />
+              <FormularioCompraPropiedades />
             </div>
           </div>
         </div>
