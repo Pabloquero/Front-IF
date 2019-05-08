@@ -6,7 +6,22 @@
 
 // You can delete this file if you're not using it
 //export { Layout } from "./src/components/layout"
+
+const React = require("react")
 const fetch = require("isomorphic-fetch")
+const ApolloClient = require("apollo-boost").default
+const { ApolloProvider } = require("react-apollo-hooks")
+
+const client = new ApolloClient({
+  uri: "https://lychee-crisp-57351.herokuapp.com/graphql",
+  fetch,
+})
+
+exports.wrapRootElement = ({ element }) => {
+  return <ApolloProvider client={client}>{element}</ApolloProvider>
+}
+
+/* const fetch = require("isomorphic-fetch")
 const React = require("react")
 const ApolloClient = require("apollo-boost").default
 const { ApolloProvider, getMarkupFromTree } = require("react-apollo-hooks")
@@ -24,3 +39,4 @@ exports.wrapRootElement = ({ element }) => {
   })
   return renderedHtml
 }
+ */
