@@ -24,7 +24,7 @@ export default function ProyectosPage() {
   `)
 
   const titulo = {
-    tituloLight: " ",
+    tituloLight: "_",
     tituloBold: "Oportunidades",
   }
 
