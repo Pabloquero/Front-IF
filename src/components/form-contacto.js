@@ -11,7 +11,7 @@ const INSERT_FORM_CONTACTO = gql`
     $mensaje: String!
     $categoria: String!
   ) {
-    insertFormCompra(
+    insertFormContacto(
       nombre: $nombre
       telefono: $telefono
       mail: $mail
@@ -31,13 +31,13 @@ export default function formContacto({ formulario }) {
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = data => {
-    insertFormContacto({
+    insertForm({
       variables: data,
     })
     document.getElementById("form-contacto").reset()
     alert("Mensaje Enviado")
   }
-  const insertFormContacto = useMutation(INSERT_FORM_CONTACTO)
+  const insertForm = useMutation(INSERT_FORM_CONTACTO)
 
   return (
     <div>
@@ -124,7 +124,7 @@ export default function formContacto({ formulario }) {
                 type="text"
                 className="textarea"
                 name="mensaje"
-                rows="4"
+                rows="6"
                 ref={register}
               />
             </div>
