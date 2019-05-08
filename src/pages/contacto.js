@@ -139,7 +139,7 @@ export default function Contacto(props) {
               style={{ border: `2px #d8d9dd solid` }}
             >
               <div className="column is-10 is-offset-1">
-                <FormContacto />
+                <FormContacto formulario={formulario} />
               </div>
             </div>
             <div
