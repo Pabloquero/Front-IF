@@ -36,9 +36,12 @@ export default function FormCompraProp() {
   const onSubmit = data => {
     insertForm({
       variables: data,
+      update: (proxy, mutationResult) => {
+        /* your custom update logic */
+        document.getElementById("form-compra").reset()
+        alert(mutationResult)
+      },
     })
-    document.getElementById("form-compra").reset()
-    alert("Mensaje Enviado")
   }
   const insertForm = useMutation(INSERT_FORM_COMPRA)
 
