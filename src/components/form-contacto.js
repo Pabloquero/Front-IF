@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import useForm from "react-hook-form"
 import gql from "graphql-tag"
 import { useMutation } from "react-apollo-hooks"
@@ -28,14 +28,19 @@ const INSERT_FORM_CONTACTO = gql`
 `
 
 export default function formContacto({ formulario }) {
+  const [estadoForm, setEstadoForm] = useState("Enviar")
+
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = data => {
+    setEstadoForm("Enviando...")
     insertForm({
       variables: data,
+      update: () => {
+        document.getElementById("form-contacto").reset()
+        setEstadoForm("¡Enviado!")
+      },
     })
-    document.getElementById("form-contacto").reset()
-    alert("Mensaje Enviado")
   }
   const insertForm = useMutation(INSERT_FORM_CONTACTO)
 
@@ -137,7 +142,7 @@ export default function formContacto({ formulario }) {
                 type="submit"
                 className="has-text-white is-fullwidth is-radiusless is-size-5 is-size-6-touch button is-black is-uppercase is-large"
               >
-                enviar
+                {estadoForm}
               </button>
             </div>
           </div>
