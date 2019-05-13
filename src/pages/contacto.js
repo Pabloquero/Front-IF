@@ -143,7 +143,7 @@ export default function Contacto(props) {
               </div>
             </div>
             <div
-              className="columns is- is-hidden-touch"
+              className="columns is-hidden-touch liContacto"
               style={{ paddingTop: `40px`, lineHeight: `50px` }}
             >
               <div className="has-text-centered is-family-code has-text-dark column">
@@ -161,7 +161,7 @@ export default function Contacto(props) {
                     }}
                   />{" "}
                   <span className="is-size-5-widescreen is-size-6-tablet">
-                    +562 3323 1020
+                    <a href="tel:+56233231020">+562 3323 1020</a>
                   </span>
                 </p>
               </div>
@@ -186,7 +186,9 @@ export default function Contacto(props) {
                     }}
                   />{" "}
                   <span className="is-size-5-widescreen is-size-6-tablet">
-                    info@inmobiliariafuenzalida.com
+                    <a href="mailto:info@inmobiliariafuenzalida.com">
+                      info@inmobiliariafuenzalida.com
+                    </a>
                   </span>
                 </p>
               </div>
@@ -220,7 +222,7 @@ export default function Contacto(props) {
               </div>
             </div>
             <div
-              className="columns is- is-hidden-desktop is-multiline is-mobile"
+              className="columns is-hidden-desktop is-multiline is-mobile liContacto"
               style={{ paddingTop: `15px` }}
             >
               <div className="has-text-centered is-family-code has-text-dark column is-12">
@@ -238,7 +240,7 @@ export default function Contacto(props) {
                     }}
                   />{" "}
                   <span className="is-size-5-widescreen is-size-6-tablet">
-                    +562 3323 1020
+                    <a href="tel:+56233231020">+562 3323 1020</a>
                   </span>
                 </p>
               </div>
@@ -257,7 +259,9 @@ export default function Contacto(props) {
                     }}
                   />{" "}
                   <span className="is-size-5-widescreen is-size-6-tablet">
-                    info@inmobiliariafuenzalida.com
+                    <a href="mailto:info@inmobiliariafuenzalida.com">
+                      info@inmobiliariafuenzalida.com
+                    </a>
                   </span>
                 </p>
               </div>

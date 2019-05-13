@@ -14,11 +14,11 @@
     height: 58px;
   }
   .logo-menu {
-    padding: 8px 8px 0px 8px;
+    padding: 8px 8px 0px 4px;
     img {
-      padding-top: 8px;
-      padding-left: 8px;
-      max-height: 52px;
+      padding-top: 2px;
+      padding-left: 2px;
+      max-height: 64px;
       height: auto;
       max-width: 100%;
     }
@@ -165,4 +165,24 @@
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+.liFooter {
+  a {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    -webkit-text-decoration: none !important;
+    text-decoration-color: #ffffff !important;
+    -webkit-text-decoration-color: #ffffff !important;
+  }
+}
+
+.liContacto {
+  a {
+    text-decoration: none !important;
+    color: $dark !important;
+    -webkit-text-decoration: none !important;
+    text-decoration-color: $dark !important;
+    -webkit-text-decoration-color: $dark !important;
+  }
 }
