@@ -51,7 +51,7 @@ export default function Contacto(props) {
     case "contacto":
       texto_formulario = data.ifapi.pagContacto.acf.texto_contacto
       break
-    case "servicio":
+    case "post venta":
       texto_formulario = data.ifapi.pagContacto.acf.texto_sac
       break
     case "inversionistas":
@@ -103,13 +103,14 @@ export default function Contacto(props) {
               </div>
               <div className="column is-paddingless">
                 <button
-                  onClick={() => setFormulario("servicio")}
+                  onClick={() => setFormulario("post venta")}
                   style={{ border: `2px #d8d9dd solid` }}
                   className={classNames(
                     "button is-size-5 is-size-6-mobile is-radiusless is-uppercase is-fullwidth is-family-code",
                     {
-                      "is-white has-text-grey-dark": formulario !== "servicio",
-                      "is-primary has-text-white": formulario === "servicio",
+                      "is-white has-text-grey-dark":
+                        formulario !== "post venta",
+                      "is-primary has-text-white": formulario === "post venta",
                     }
                   )}
                 >
