@@ -33,6 +33,7 @@ export default function Compra() {
         title="Compra de Propiedades"
         keywords={[`fuenzalida`, `inmobiliaria`, `edificios`]}
       />
+
       <ImagenFondo imgf={data.ifapi.pagCompra.acf.imagen_de_fondo} />
       <TituloPage titulo={titulo} />
       <div className="container has-background-grey">

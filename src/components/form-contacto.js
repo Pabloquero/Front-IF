@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import useForm from "react-hook-form"
 import gql from "graphql-tag"
 import { useMutation } from "react-apollo-hooks"
+import { BarLoader } from "react-css-loaders"
+import classNames from "classnames"
 
 const INSERT_FORM_CONTACTO = gql`
   mutation insertFormContacto(
@@ -32,13 +34,18 @@ export default function formContacto({ formulario }) {
 
   const { register, handleSubmit, errors } = useForm()
 
+  const msjExito = "Mensaje Enviado, pronto estaremos en contacto."
+  const loader = (
+    <BarLoader color="#FFF" size="4" style={{ margin: `8px auto` }} />
+  )
+
   const onSubmit = data => {
-    setEstadoForm("Enviando...")
+    setEstadoForm(loader)
     insertForm({
       variables: data,
       update: () => {
         document.getElementById("form-contacto").reset()
-        setEstadoForm("¡Enviado!")
+        setEstadoForm(msjExito)
       },
     })
   }
@@ -89,9 +96,12 @@ export default function formContacto({ formulario }) {
                 type="text"
                 className="input"
                 name="telefono"
-                ref={register({ required: true })}
+                ref={register({
+                  pattern: /\d+/,
+                })}
               />
-              {errors.telefono && "Por favor ingrese su telefono"}
+              {errors.telefono &&
+                "Por favor ingrese un número de teléfono válido"}
             </div>
           </div>
           <div
@@ -110,9 +120,12 @@ export default function formContacto({ formulario }) {
                 type="text"
                 className="input"
                 name="mail"
-                ref={register({ required: true })}
+                ref={register({
+                  required: true,
+                  pattern: /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
+                })}
               />
-              {errors.mail && "Por favor ingrese su mail"}
+              {errors.mail && "Por favor ingrese un mail válido"}
             </div>
           </div>
         </div>
@@ -140,7 +153,13 @@ export default function formContacto({ formulario }) {
             <div className="control">
               <button
                 type="submit"
-                className="has-text-white is-fullwidth is-radiusless is-size-5 is-size-6-touch button is-black is-uppercase is-large"
+                disabled={estadoForm === msjExito ? true : false}
+                className={classNames(
+                  "has-text-white is-fullwidth is-radiusless is-size-5 is-size-6-touch button is-black is-uppercase is-large",
+                  {
+                    "is-primary": estadoForm === msjExito,
+                  }
+                )}
               >
                 {estadoForm}
               </button>

@@ -24,6 +24,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-apollo-hooks": "^0.4.5",
+    "react-css-loaders": "0.0.5",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-hook-form": "^3.2.3",
