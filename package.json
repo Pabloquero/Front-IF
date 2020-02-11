@@ -7,6 +7,7 @@
   "dependencies": {
     "apollo-boost": "^0.3.1",
     "bulma": "^0.7.4",
+    "bulma-carousel": "^4.0.4",
     "classnames": "^2.2.6",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
@@ -22,13 +23,16 @@
     "isomorphic-fetch": "^2.2.1",
     "mapbox-gl": "^0.53.1",
     "prop-types": "^15.7.2",
+    "pure-react-carousel": "^1.25.2",
     "react": "^16.8.6",
     "react-apollo-hooks": "^0.4.5",
     "react-css-loaders": "0.0.5",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-hook-form": "^3.2.3",
-    "react-icons": "^3.5.0"
+    "react-icons": "^3.5.0",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^1.16.4",
@@ -42,6 +46,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "clean": "gatsby clean",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
