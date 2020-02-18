@@ -17,7 +17,7 @@ import FooterSpace from "../components/footer-top-space"
 import ImagenFondo from "../components/fondo-pagina"
 import Bullet from "../components/bullet_sac"
 import CarouselImg from "../components/carousel_img"
-import ItemDescarga from "../components/item-descarga"
+//import ItemDescarga from "../components/item-descarga"
 
 export default function SACPage() {
   const data = useStaticQuery(graphql`
@@ -53,18 +53,6 @@ export default function SACPage() {
             carrousel_8
             carrousel_9
             carrousel_10
-            descarga_pdf_1 {
-              texto_descarga
-              link_descarga
-            }
-            descarga_pdf_2 {
-              texto_descarga
-              link_descarga
-            }
-            descarga_pdf_3 {
-              texto_descarga
-              link_descarga
-            }
           }
         }
       }
@@ -508,9 +496,9 @@ export default function SACPage() {
             }}
           />
           <div className="column is-paddingless is-10 is-offset-1 is-10-touch is-offset-1-touch">
-            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_1} />
+            {/* <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_1} />
             <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_2} />
-            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_3} />
+            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_3} />  */}
           </div>
         </div>
       </div>
