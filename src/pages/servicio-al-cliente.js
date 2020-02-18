@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
 
 import Slider from "react-slick"
