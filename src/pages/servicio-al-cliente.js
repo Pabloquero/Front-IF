@@ -16,6 +16,8 @@ import TituloPage from "../components/titulo-page"
 import FooterSpace from "../components/footer-top-space"
 import ImagenFondo from "../components/fondo-pagina"
 import Bullet from "../components/bullet_sac"
+import CarouselImg from "../components/carousel_img"
+import ItemDescarga from "../components/item-descarga"
 
 export default function SACPage() {
   const data = useStaticQuery(graphql`
@@ -46,6 +48,23 @@ export default function SACPage() {
             carrousel_3
             carrousel_4
             carrousel_5
+            carrousel_6
+            carrousel_7
+            carrousel_8
+            carrousel_9
+            carrousel_10
+            descarga_pdf_1 {
+              texto_descarga
+              link_descarga
+            }
+            descarga_pdf_2 {
+              texto_descarga
+              link_descarga
+            }
+            descarga_pdf_3 {
+              texto_descarga
+              link_descarga
+            }
           }
         }
       }
@@ -61,8 +80,17 @@ export default function SACPage() {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   const theSlider = useRef(null)
@@ -145,7 +173,7 @@ export default function SACPage() {
           </div>
           <div className="column is-10 is-offset-1">
             <div className="columns is-marginless is-multiline is-mobile is-vcentered">
-              <div className="column is-paddingless is-1 has-text-left is-hidden-touch">
+              <div className="column is-paddingless is-1 has-text-left">
                 <span
                   style={{
                     height: `40px`,
@@ -164,26 +192,41 @@ export default function SACPage() {
                   />
                 </span>
               </div>
-              <div className="column is-paddingless is-10-desktop is-12-touch">
+              <div className="column is-paddingless is-10">
                 <Slider {...settingsSlick} ref={theSlider}>
-                  <div>
-                    <img src={data.ifapi.pagSAC.acf.carrousel_1} alt="" />
-                  </div>
-                  <div>
-                    <img src={data.ifapi.pagSAC.acf.carrousel_2} alt="" />
-                  </div>
-                  <div>
-                    <img src={data.ifapi.pagSAC.acf.carrousel_3} alt="" />
-                  </div>
-                  <div>
-                    <img src={data.ifapi.pagSAC.acf.carrousel_4} alt="" />
-                  </div>
-                  <div>
-                    <img src={data.ifapi.pagSAC.acf.carrousel_5} alt="" />
-                  </div>
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_1}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_2}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_3}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_4}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_5}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_6}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_7}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_8}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_9}
+                  />
+                  <CarouselImg
+                    imgCarousel={data.ifapi.pagSAC.acf.carrousel_10}
+                  />
                 </Slider>
               </div>
-              <div className="column is-paddingless is-1  is-hidden-touch has-text-right">
+              <div className="column is-paddingless is-1 has-text-right">
                 <span
                   style={{
                     height: `40px`,
@@ -412,6 +455,62 @@ export default function SACPage() {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="columns is-marginless is-multiline">
+          <div className="column is-paddingless is-12">
+            <h2
+              className="has-text-primary has-text-weight-light is-size-3 is-size-4-touch has-text-centered-touch is-uppercase is-family-monospace"
+              style={{ paddingTop: `40px` }}
+            >
+              solicita tu atención
+            </h2>
+            <h1
+              className="has-text-primary has-text-weight-bold is-size-2 is-size-3-touch has-text-centered-touch is-uppercase is-family-monospace"
+              style={{ lineHeight: `0.7em` }}
+            >
+              de post venta
+            </h1>
+          </div>
+          <div className="column is-12 is-paddingless">
+            <h3
+              className="has-text-centered is-size-5 has-text-weight-bold"
+              style={{
+                padding: `50px 0 10px`,
+              }}
+            >
+              Si ya verificaste que tu consulta o solicitud corresponde a post
+              venta
+            </h3>
+          </div>
+          <div className="column is-12 is-paddingless has-text-centered">
+            <a
+              href={
+                "https://apps1.buildingclerk.cl/postventa/formularios/fuenzalida/"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button is-primary has-text-white is-uppercase"
+              style={{ padding: `21px 25px 21px`, fontSize: `1em` }}
+            >
+              <span style={{ fontSize: `1.8em` }} className="is-family-code">
+                Ingresa aquí
+              </span>
+            </a>
+          </div>
+          <div
+            className="column is-paddingless is-10 is-offset-1 is-10-touch is-offset-1-touch"
+            style={{
+              borderTop: `2px solid grey`,
+              margin: `30px auto`,
+            }}
+          />
+          <div className="column is-paddingless is-10 is-offset-1 is-10-touch is-offset-1-touch">
+            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_1} />
+            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_2} />
+            <ItemDescarga descarga={data.ifapi.pagSAC.acf.descarga_pdf_3} />
           </div>
         </div>
       </div>
