@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react"
-import { useMediaQuery } from "../components/mediaQueryHook"
 import { useStaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
 
@@ -76,8 +75,6 @@ export default function SACPage() {
     tituloBold: "Al Cliente",
   }
 
-  const isDesktop = useMediaQuery("(min-width: 1088px)")
-
   var settingsSlick = {
     dots: false,
     arrows: false,
@@ -117,10 +114,7 @@ export default function SACPage() {
       />
       <ImagenFondo imgf={data.ifapi.pagSAC.acf.imagen_de_fondo} />
       <TituloPageSAC titulo={titulo} />
-      <div
-        className="containerTwo has-background-grey"
-        style={styles.margTop(isDesktop)}
-      >
+      <div className="containerTwo has-background-grey">
         <div
           className="columns is-marginless is-marginless is-multiline"
           style={{ padding: `30px 23px` }}
@@ -521,10 +515,4 @@ export default function SACPage() {
       <FooterSpace />
     </Layout>
   )
-}
-
-const styles = {
-  margTop: isDesktop => ({
-    marginTop: "50px",
-  }),
 }
