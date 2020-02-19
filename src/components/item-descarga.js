@@ -26,11 +26,10 @@ export default function ItemDescarga({
           rel="noopener noreferrer"
           className="button is-primary has-text-white is-uppercase"
           style={{
-            padding: `5px 20px 5px`,
-            fontSize: `1em`,
+            padding: `0px 15px`,
           }}
         >
-          <span style={{ fontSize: `1em` }} className="is-family-code">
+          <span style={{ fontSize: `0.9em` }} className="is-family-code">
             descargar
           </span>
         </a>

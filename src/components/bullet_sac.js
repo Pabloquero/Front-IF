@@ -10,8 +10,8 @@ export default function bullet({ bullet: { icono, texto } }) {
         <div
           style={{
             backgroundColor: `white`,
-            height: `120px`,
-            width: `120px`,
+            height: `90px`,
+            width: `90px`,
             margin: `auto`,
             borderRadius: `50%`,
           }}
@@ -21,15 +21,15 @@ export default function bullet({ bullet: { icono, texto } }) {
             alt=""
             className="image"
             style={{
-              height: `120px`,
+              height: `90px`,
               margin: `auto`,
             }}
           />
         </div>
       </div>
       <p
-        className="is-family-primary is-size-4"
-        style={{ padding: `10px 70px`, lineHeight: `1.2em` }}
+        className="is-family-primary is-size-5"
+        style={{ padding: `5px 70px`, lineHeight: `1em` }}
       >
         {texto}
       </p>

@@ -55,6 +55,7 @@ const Header = () => {
                 <img
                   src="http://www.betafuenzalida.bylcomunicaciones.com/wp-content/uploads/2019/03/logo.png"
                   alt="Inmobiliaria Fuenzalida"
+                  style={{ maxWidth: `230px` }}
                 />
               </Link>
 

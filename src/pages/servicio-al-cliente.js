@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react"
+import { useMediaQuery } from "../components/mediaQueryHook"
 import { useStaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
 
@@ -7,12 +8,12 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { FiArrowLeftCircle } from "react-icons/fi"
 import { FiArrowRightCircle } from "react-icons/fi"
-import { IoIosArrowDropdown } from "react-icons/io"
+import { IoIosArrowDropdown, IoIosColorFill } from "react-icons/io"
 import { IoIosArrowDropup } from "react-icons/io"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TituloPage from "../components/titulo-page"
+import TituloPageSAC from "../components/titulo-page-sac"
 import FooterSpace from "../components/footer-top-space"
 import ImagenFondo from "../components/fondo-pagina"
 import Bullet from "../components/bullet_sac"
@@ -75,6 +76,8 @@ export default function SACPage() {
     tituloBold: "Al Cliente",
   }
 
+  const isDesktop = useMediaQuery("(min-width: 1088px)")
+
   var settingsSlick = {
     dots: false,
     arrows: false,
@@ -113,10 +116,10 @@ export default function SACPage() {
         keywords={[`fuenzalida`, `inmobiliaria`, `edificios`]}
       />
       <ImagenFondo imgf={data.ifapi.pagSAC.acf.imagen_de_fondo} />
-      <TituloPage titulo={titulo} />
+      <TituloPageSAC titulo={titulo} />
       <div
-        className="container has-background-grey"
-        style={{ paddingTop: `10px` }}
+        className="containerTwo has-background-grey"
+        style={styles.margTop(isDesktop)}
       >
         <div
           className="columns is-marginless is-marginless is-multiline"
@@ -144,7 +147,7 @@ export default function SACPage() {
           </div>
         </div>
       </div>
-      <div className="container has-background-white">
+      <div className="containerTwo has-background-white">
         <div className="columns is-marginless is-multiline">
           <div className="column is-paddingless is-12">
             <h2
@@ -162,7 +165,7 @@ export default function SACPage() {
           </div>
           <div className="column is-paddingless is-10 is-offset-1 is-10-touch is-offset-1-touch">
             <p
-              className="is-size-5 is-size-6-touch has-text-centered-touch"
+              className="is-size-6 is-size-6-touch has-text-centered-touch"
               style={{
                 padding: `40px 0px 30px`,
                 borderBottom: `2px solid grey`,
@@ -171,13 +174,14 @@ export default function SACPage() {
               {data.ifapi.pagSAC.acf.texto_vivienda}
             </p>
           </div>
-          <div className="column is-10 is-offset-1">
+          <div className="column is-10 is-paddingless is-offset-1">
             <div className="columns is-marginless is-multiline is-mobile is-vcentered">
-              <div className="column is-paddingless is-1 has-text-left">
+              <div className="column is-paddingless is-1-desktop is-2-mobile has-text-left">
                 <span
                   style={{
                     height: `40px`,
                     width: `40px`,
+                    zIndex: `9999`,
                   }}
                   onClick={() => {
                     theSlider.current.slickPrev()
@@ -192,7 +196,7 @@ export default function SACPage() {
                   />
                 </span>
               </div>
-              <div className="column is-paddingless is-10">
+              <div className="column is-paddingless is-10-desktop is-8-touch">
                 <Slider {...settingsSlick} ref={theSlider}>
                   <CarouselImg
                     imgCarousel={data.ifapi.pagSAC.acf.carrousel_1}
@@ -226,7 +230,7 @@ export default function SACPage() {
                   />
                 </Slider>
               </div>
-              <div className="column is-paddingless is-1 has-text-right">
+              <div className="column is-paddingless is-1-desktop is-2-touch has-text-right">
                 <span
                   style={{
                     height: `40px`,
@@ -254,7 +258,7 @@ export default function SACPage() {
         </div>
       </div>
       <div className="has-background-grey" style={{ marginTop: `40px` }}>
-        <div className="container">
+        <div className="containerTwo">
           <h1
             className="has-text-primary has-text-weight-bold is-size-2 is-size-3-touch has-text-centered-touch is-uppercase is-family-monospace"
             style={{ lineHeight: `1em`, padding: `40px 0px 40px` }}
@@ -263,13 +267,13 @@ export default function SACPage() {
           </h1>
           <div className="columns is-marginless is-mobile is-multiline">
             <div className="column is-10 is-10-touch is-offset-1 is-offset-1-touch">
-              <h3 className="has-text-left is-uppercase is-size-5 has-text-weight-bold">
+              <h3 className="has-text-left is-uppercase is-size-6 has-text-weight-bold">
                 garantías de construcción
               </h3>
             </div>
             <div className="column is-10 is-10-touch is-offset-1 is-offset-1-touch">
               <p
-                className="is-size-5 is-family-code"
+                className="is-size-6 is-family-code"
                 style={{
                   textAlign: `justify`,
                   textAlignLast: `center`,
@@ -297,7 +301,7 @@ export default function SACPage() {
                 })}
               >
                 <p
-                  className="is-size-5 is-family-code"
+                  className="is-size-6 is-family-code"
                   style={{
                     textAlign: `justify`,
                     textAlignLast: `center`,
@@ -316,7 +320,7 @@ export default function SACPage() {
                   O DEFECTOS DE CONSTRUCCIÓN, de acuerdo al siguiente detalle:
                 </p>
                 <p
-                  className="is-size-5 is-family-code"
+                  className="is-size-6 is-family-code"
                   style={{
                     textAlign: `left`,
                     textAlignLast: `left`,
@@ -340,7 +344,7 @@ export default function SACPage() {
                   intervención de terceros.
                 </p>
                 <h3
-                  className="has-text-left is-uppercase is-size-5 has-text-weight-bold"
+                  className="has-text-left is-uppercase is-size-6 has-text-weight-bold"
                   style={{
                     paddingBottom: `40px`,
                   }}
@@ -348,7 +352,7 @@ export default function SACPage() {
                   CONDICIONES PARA HACER EFECTIVA UNA GARANTÍA DE POSTVENTA
                 </h3>
                 <p
-                  className="is-size-5 has-text-centered is-family-code"
+                  className="is-size-6 has-text-centered is-family-code"
                   style={{
                     paddingBottom: `40px`,
                   }}
@@ -361,7 +365,7 @@ export default function SACPage() {
                   INMOBILIARIA FUENZALIDA.
                 </p>
                 <p
-                  className="is-size-5 is-family-code"
+                  className="is-size-6 is-family-code"
                   style={{
                     textAlign: `left`,
                     textAlignLast: `left`,
@@ -375,7 +379,7 @@ export default function SACPage() {
                   la vivienda.
                 </p>
                 <h3
-                  className="has-text-left is-uppercase is-size-5 has-text-weight-bold"
+                  className="has-text-left is-uppercase is-size-6 has-text-weight-bold"
                   style={{
                     paddingBottom: `40px`,
                   }}
@@ -383,7 +387,7 @@ export default function SACPage() {
                   EXCLUSIONES DE POST VENTA
                 </h3>
                 <p
-                  className="is-size-5 is-family-code"
+                  className="is-size-6 is-family-code"
                   style={{
                     textAlign: `left`,
                     textAlignLast: `left`,
@@ -458,7 +462,7 @@ export default function SACPage() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="containerTwo">
         <div className="columns is-marginless is-multiline">
           <div className="column is-paddingless is-12">
             <h2
@@ -476,7 +480,7 @@ export default function SACPage() {
           </div>
           <div className="column is-12 is-paddingless">
             <h3
-              className="has-text-centered is-size-5 has-text-weight-bold"
+              className="has-text-centered is-size-6 has-text-weight-bold"
               style={{
                 padding: `50px 0 10px`,
               }}
@@ -493,9 +497,9 @@ export default function SACPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="button is-primary has-text-white is-uppercase"
-              style={{ padding: `21px 25px 21px`, fontSize: `1em` }}
+              style={{ padding: `10px 20px 9px`, fontSize: `1em` }}
             >
-              <span style={{ fontSize: `1.8em` }} className="is-family-code">
+              <span style={{ fontSize: `1.4em` }} className="is-family-code">
                 Ingresa aquí
               </span>
             </a>
@@ -517,4 +521,10 @@ export default function SACPage() {
       <FooterSpace />
     </Layout>
   )
+}
+
+const styles = {
+  margTop: isDesktop => ({
+    marginTop: "50px",
+  }),
 }
