@@ -14,7 +14,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TituloPageSAC from "../components/titulo-page-sac"
 import FooterSpace from "../components/footer-top-space"
-import ImagenFondo from "../components/fondo-pagina"
+import ImagenFondoSAC from "../components/fondo-pagina-sac"
 import Bullet from "../components/bullet_sac"
 import CarouselImg from "../components/carousel_img"
 import ItemDescarga from "../components/item-descarga"
@@ -112,19 +112,19 @@ export default function SACPage() {
         title="Servicio al Cliente"
         keywords={[`fuenzalida`, `inmobiliaria`, `edificios`]}
       />
-      <ImagenFondo imgf={data.ifapi.pagSAC.acf.imagen_de_fondo} />
+      <ImagenFondoSAC imgf={data.ifapi.pagSAC.acf.imagen_de_fondo} />
       <TituloPageSAC titulo={titulo} />
       <div className="containerTwo has-background-grey">
         <div
           className="columns is-marginless is-marginless is-multiline"
-          style={{ padding: `30px 23px` }}
+          style={{ padding: `0px 23px` }}
         >
           <div className="column is-paddingless is-12-desktop is-10-widescreen is-offset-1-widescreen is-paddingless">
             <div className="columns is-marginless is-marginless is-mobile is-multiline">
               <div className="column is-paddingless is-2 is-paddingless" />
               <div
                 className="column is-paddingless is-8 is-paddingless has-text-centered"
-                style={{ margin: `30px 0px 30px` }}
+                style={{ margin: `20px 0px 20px` }}
               >
                 <h1 className="is-family-secondary is-size-4 is-size-5-touch">
                   {data.ifapi.pagSAC.acf.enunciado_bullets_1}

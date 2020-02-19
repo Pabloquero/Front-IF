@@ -60,6 +60,15 @@
   background-position: center;
 }
 
+.imagenFondoPaginasSAC {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
 .input {
   height: 40px;
   border-radius: 0px;
@@ -130,6 +139,13 @@
 
 .imagenFondoPaginas {
   height: 700px;
+  @media screen and (max-width: $desktop - 1) {
+    height: 280px;
+  }
+}
+
+.imagenFondoPaginasSAC {
+  height: 600px;
   @media screen and (max-width: $desktop - 1) {
     height: 280px;
   }
