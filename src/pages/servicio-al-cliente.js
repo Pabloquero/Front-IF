@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { FiArrowLeftCircle } from "react-icons/fi"
 import { FiArrowRightCircle } from "react-icons/fi"
-import { IoIosArrowDropdown, IoIosColorFill } from "react-icons/io"
+import { IoIosArrowDropdown } from "react-icons/io"
 import { IoIosArrowDropup } from "react-icons/io"
 
 import Layout from "../components/layout"
