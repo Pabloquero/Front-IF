@@ -30,3 +30,10 @@ En caso que tenga problemas con el cache, hay un comando para limpiarlo:
 npm run clean
 
 El Sitio está construido en base a React, Gatsby y GraphQL, todas las dependencias del sitio se pueden encontrar en el package.json, y la documentación de cada dependencia se puede encontrar en sus propios sitios webs o páginas de github.
+
+Para poder actualizar la versión nueva del sitio, el front end está alojado en Netlify, y cada vez que se cargue nuevo contenido al repositorio, Netlify automáticamente construye nuevamente el sitio.
+Repo: https://github.com/GrupoBYL/serverless-fuenzalida.git
+Comandos:
+git add .
+git commit -m “mensaje de los nuevos cambios”
+git push
