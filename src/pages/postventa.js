@@ -282,7 +282,7 @@ export default function SACPage() {
                 cuidado y correcto uso de la vivienda, con el objetivo de
                 orientar en aspectos generales y específicos en el cómo
                 resguardar su inversión. Todo lo antes descrito, tiene lugar
-                antes de la entrega de llaves. Las o bservaciones que puedan
+                antes de la entrega de llaves. Las observaciones que puedan
                 aparecer durante este proceso deberán quedar consignadas en el
                 acta de entrega, documento que debe ser firmado por ambas partes
                 para, con posterioridad, proceder al levantamiento de los ítems

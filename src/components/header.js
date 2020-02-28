@@ -18,6 +18,10 @@ const Header = () => {
       url: "compra-de-propiedades",
     },
     {
+      texto: "POSTVENTA",
+      url: "postventa",
+    },
+    {
       texto: "CONTACTO",
       url: "contacto",
       form: "contacto",
