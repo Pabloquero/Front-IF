@@ -10,7 +10,7 @@ const ApolloClient = require("apollo-boost").default
 const { ApolloProvider } = require("react-apollo-hooks")
 
 const client = new ApolloClient({
-  uri: "https://lychee-crisp-57351.herokuapp.com/graphql",
+  // uri: LINK API MODIFICADO POR SEGURIDAD,
   fetch,
 })
 
